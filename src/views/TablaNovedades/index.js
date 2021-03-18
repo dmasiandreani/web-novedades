@@ -4,6 +4,12 @@ import './style.css'
 /*import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'*/
 
 export default function TablaNovedades() {
+    return(
+      <h2>TablaNovedades</h2>
+    );
+  }
+/*
+export default function TablaNovedades() {
     const [data, setData] = useState([]);
     const URL = "http://localhost:63747/api/novedades";
 
@@ -48,4 +54,4 @@ export default function TablaNovedades() {
             </table>
         </div>
     );
-}
+}*/

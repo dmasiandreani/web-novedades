@@ -4,7 +4,7 @@ import './style.css'
 
 export default function TablaContrato() {
   return(
-    <div>TablaContrato</div>
+    <h2>TablaContrato</h2>
   );
 }
 /*
