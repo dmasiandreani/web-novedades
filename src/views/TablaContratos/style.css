@@ -1,0 +1,10 @@
+th, td{
+    border: solid black 1px;
+}
+th{
+    background-color: rgb(230, 71, 71);
+}
+table{
+    margin: 1em;
+    align-items: center;
+}

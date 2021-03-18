@@ -1,0 +1,32 @@
+-Pantalla de home
+-nav bar (glyphicon)
+                    ----------nav-bar
+                    -TraduccionesxContrato
+                        -tabla1 -> {El contenido de una tabla unica}
+                            .
+                            .
+                        -tablaN
+                    -Novedades
+                        -tabla1
+                            .
+                            .
+                        -tablaN
+                    -----------------
+
+-Consultar tema de Estilos
+-Filtros de busqueda
+-Paginado en las tablas
+-Preguntar
+    - Creacion de contratos -> ABM
+    - Creacion de clientes -> soloCreacion
+    -Acciones para ABM de TraduccionesxContrato (preguntar a juli la posibilidad de un create)
+    -Borrado
+        -Traducciones Borrados fisicos
+        -Contrato Borrados Logicos
+
+-Tener en cueta las validaciones necesarias a la hora de hacer los ABMs
+-Volver al home
+-Creacion de modulos para la modificacion (considerar que los elementos tienen mutiples dependencias)
+    -ver formato (pop-up / ventana nueva / pestaña nueva)
+
+
