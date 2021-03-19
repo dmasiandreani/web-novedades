@@ -6,6 +6,12 @@
     align-items: center;
     box-shadow: 0.2em 0.2em 1em rgb(133, 133, 133);
 }
+.navbar img{
+    display: flex;
+    align-items: center;
+    width: 9rem;
+    margin-left: 20px;
+}
 .menu-bars{
     margin-left: 2rem;
     font-size: 2rem;
@@ -13,7 +19,7 @@
 }
 .nav-menu{
     background-color: white;
-    width: 250px;
+    width: 220px;
     height: 100vh;
     display: flex;
     justify-content: center;

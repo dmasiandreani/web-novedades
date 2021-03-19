@@ -5,15 +5,17 @@ import * as AiIcons from 'react-icons/ai'
 import { SidebarData } from './SidebarData'
 import './styles.css'
 import	{IconContext} from 'react-icons'
+import logoAndreani from '../../assets/img/logo-andreani.png'
 
 export default function NavBar() {
     const [sideBarState, setSideBarState] = useState(false);
     return (
-        <IconContext.Provider value={{color : 'Black'}}>
+        <IconContext.Provider value={{ color:'black'}}>
             <div className="navbar">
                 <Link to='#' className='menu-bars'>
                     <FaIcons.FaBars onClick={() => (setSideBarState(!sideBarState))} />
                 </Link>
+                <img src={logoAndreani}  alt='logo'/>
             </div>
             <nav className={sideBarState ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-item' onClick={() => (setSideBarState(!sideBarState))}>
@@ -35,6 +37,7 @@ export default function NavBar() {
 
                 </ul>
             </nav>
+         
         </IconContext.Provider>
     );
 }

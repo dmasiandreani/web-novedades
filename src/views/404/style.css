@@ -1,0 +1,11 @@
+.main-container img{
+    display: flex;
+    width: 30em;
+    margin: auto;
+}
+.main-container h1{
+    margin-top: 2em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+}
