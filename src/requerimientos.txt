@@ -1,3 +1,76 @@
+----------------------------------------------------------Tablas - Contrato con la api
+---------------------------Novedades
+Base de Datos:
+              Servidor:                          ITGTESTDCSRV1
+              Base De Datos: GeneradorDeNovedades
+              Tabla:                               Novedades
+              Usuario:                           andreani_test
+              Contraseña:      cualquiercosa
+
+Filtros
+              NumeroDeEnvio            Texto                                 OPCIONAL
+              eventoEnvio:     Text
+              Cliente:              Desplegable                    MANDATORIO                                                                                                                                 Se llena con la tabla Contratos, columna Cliente
+              CodigoCliente   Texto                                OPCIONAL
+              Traduccion                      Texto                                OPCIONAL
+              fechaDesde (fecha de incidencia)       DateTimePicker     OPCIONAL
+              fechaHasta (fecha de incidencia)       DateTimePicker     OPCIONAL
+
+Tabla GeneradorDeNovedades..Novedades = Grilla
+              id:
+              numeroDeEnvio:            Numero Andreani
+              eventoEnvio:    Evento de Integra que se generó para el envío
+              cliente:               Cliente dueño del envío
+              codigoCliente:   Un codigo definido por el cliente para un evento en particular
+              traduccion:        Un codigo definido por el cliente para un evento en particular
+              fechaIncidencia: Fecha del movimiento
+              mensajeEnviado:           mensaje generado que se envió al cliente
+
+---------------------------Contrato
+
+Una grilla con la siguiente información:
+Columnas:
+//TABLA CONTRATOS
+    Cliente: Este dato sale de la tabla Contratos columna Cliente
+    Numero De Contrato: Este dato sale de la tabla Contratos columna NumeroInterno
+//TABLA TMS
+    Evento: Este dato sale de la tabla TrazasConfiguracionTMSs columna Evento
+    Motivo: Este dato sale de la tabla TrazasConfiguracionTMSs columna MotivoDescripcion
+    Submotivo: Este dato sale de la tabla TrazasConfiguracionTMSs columna SubmotivoDescripcion
+    Ciclo: Este dato sale de la tabla TrazasConfiguracionTMSs columna Ciclo
+    TMS: Este dato sale de la tabla TrazasConfiguracionTMSs columna TMS
+//TABLA TRADxCONTRATOS
+    CodigoCliente1: Este dato sale de la tabla TraduccionesPorContrato columna CodigoCliente1
+    CodigoClietne2: Este dato sale de la tabla TraduccionesPorContrato columna CodigoCliente2
+
+
+
+//Botones
+    Accioes: Boton Editar (Abre la misma ventana que Nueva Configuración) / Boton Eliminar
+ //Nueva Configuración
+    Botón Nueva Configuración: Abre una nueva “ventana” para agregar una nueva configuración. 
+    La ventana tendrá los siguientes campos:
+    TMS (Lista Desplegable): Este dato sale de la tabla TrazasConfiguracionTMSs columna TMS
+    Evento (Lista Desplegable): Este dato sale de la tabla TrazasConfiguracionTMSs columna Evento (Depende de la selección de los campos anteriores)
+    Motivo (Lista Desplegable): Este dato sale de la tabla TrazasConfiguracionTMSs columna MotivoDescripcion (Depende de la selección de los campos anteriores)
+    Submotivo (Lista Desplegable): Este dato sale de la tabla TrazasConfiguracionTMSs columna SubmotivoDescripcion (Depende de la selección de los campos anteriores)
+    Ciclo (Lista Desplegable): Este dato sale de la tabla TrazasConfiguracionTMSs columna Ciclo (Depende de la selección de los campos anteriores)
+    CodigoCliente1 (Text Box): Este dato sale de la tabla TraduccionesPorContrato columna CodigoCliente1
+    CodigoClietne2 (Text Box): Este dato sale de la tabla TraduccionesPorContrato columna CodigoCliente2
+
+Botón Guardar/Actualizar
+En el caso de llegar a esta ventana por el boton “Nueva Configuración”, todos los campos se pueden editar
+En el caso que se llegue a esta ventana por un botón Editar, los siguientes campos NO se pueden cambiar:
+TMS
+Evento
+Motivo
+Submotivo
+Ciclo
+Solo se puede cambiar el valor de los siguientes campos:
+CodigoCliente1
+CodigoClietne2
+3 tablas contratos traducc tms 
+c/u de esas tablas se muestran juntas, solo tengo que actualizar solo
 ----------------------------------------------------------Reunion Lean/Juli
 
 -Crear una pagina nueva ABM de configuraciones por Contrato.
@@ -27,7 +100,8 @@
 
     Filtros:
 
-    Contrato: Sale de la tabla contrato: Mostrar Cliente-NumeroInterno ordenado por Cliente, NumeroInterno (Mostrar solo los que tienen Activo = 1)
+    Contrato: Sale de la tabla contrato: Mostrar Cliente-NumeroInterno ordenado por Cliente, 
+    NumeroInterno (Mostrar solo los que tienen Activo = 1)
     Ejemplo de datos en la lista:
     Seleccionar
 
@@ -64,6 +138,7 @@
     //Botones
     Acciones: Boton Editar (Abre la misma ventana que Nueva Configuración) / Boton Eliminar
 
+    
     //Nueva Configuración
 
     Botón Nueva Configuración: Abre una nueva “ventana” para agregar una nueva configuración.
@@ -75,23 +150,29 @@
     Motivo (Lista Desplegable): Este dato sale de la tabla TrazasConfiguracionTMSs columna MotivoDescripcion (Depende de la selección de los campos anteriores)
     Submotivo (Lista Desplegable): Este dato sale de la tabla TrazasConfiguracionTMSs columna SubmotivoDescripcion (Depende de la selección de los campos anteriores)
     Ciclo (Lista Desplegable): Este dato sale de la tabla TrazasConfiguracionTMSs columna Ciclo (Depende de la selección de los campos anteriores)
+    Cliente (Lista Desplegable) : Este dato sale de la tabla 
+    NumeroContrato (Lista Desplegable): Este dato sale de la tabla Contrato columna NumeroContrato
+
     CodigoCliente1 (Text Box): Este dato sale de la tabla TraduccionesPorContrato columna CodigoCliente1
     CodigoClietne2 (Text Box): Este dato sale de la tabla TraduccionesPorContrato columna CodigoCliente2
     Botón Guardar/Actualizar
 
+    
+    //Editar Configuracion
+     
     En el caso de llegar a esta ventana por el boton “Nueva Configuración”, todos los campos se pueden editar
-
-    En el caso que se llegue a esta ventana por un botón Editar, los siguientes campos NO se pueden cambiar:
-
-    TMS
-    Evento
-    Motivo
-    Submotivo
-    Ciclo
+    En el caso que se llegue a esta ventana por un botón Editar. 
+    
+    Los siguientes campos NO se pueden cambiar:
+        TMS
+        Evento
+        Motivo
+        Submotivo
+        Ciclo
 
     Solo se puede cambiar el valor de los siguientes campos:
-    CodigoCliente1
-    CodigoClietne2
+        CodigoCliente1
+        CodigoCliente2
 ---------------------------------------------------------------------------------
 
 

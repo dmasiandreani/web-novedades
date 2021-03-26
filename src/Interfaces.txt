@@ -1,0 +1,64 @@
+"NOVEDADES"
+"GET (ByFilter) /api/novedades"
+    "REQ"
+    "FiltroNovedad"
+            {
+              "numeroEnvio": "string - OPCIONAL"
+              "eventoEnvio": "string - OPCIONAL"
+              "cliente": "string - OPCIONAL"
+              "codigoCliente": "string - OPCIONAL"
+              "traduccion": "string - OPCIONAL"
+              "fechaDesde": "string - OPCIONAL"
+              "fechaHasta": "string - OPCIONAL"
+            }
+
+ 
+
+"Del lado de la web se va a obligar a ingresar por lo menos 1 filtro"
+
+ 
+
+
+"CLIENTES"
+"GET  /api/clientes/nombres"
+    "RES"
+            {
+                "nombreClientes": ["avon", "meli", "..."]
+            }
+            
+            
+
+ 
+
+"TRADUCCIONES POR CONTRATO"
+"GET  /api/traduccionesPorContrato"
+    "QUERY STRING"
+            "/api/traduccionesPorContrato/numeroInterno={numeroInterno}"
+
+ 
+
+    "RES"
+            {
+                "traduccionPorContrato": {
+                    "id": 7280,
+                    "evento": "Admision",
+                    "movimiento": 86,   
+                    "descripcionMotivoTraza": "*",
+                    "motivo": 0 null,
+                    "descripcionSubMotivoTraza": "*",
+                    "subMotivo": 0 null,
+                    "ciclo": 1,
+                    "codigoCliente1": "test",
+                    "codigoCliente2": "test",
+                    "cliente": "Prueba",                                   
+                    "idContrato": 4003,
+                    "idTrazasConfiguracionTMSs": 2
+                },
+                "numeroInterno": "123123",
+                "tms": "INTEGRA"
+            }
+
+
+"GET de trazas"
+
+Primero lista desplegable de TMS

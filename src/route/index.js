@@ -20,10 +20,10 @@ export default function Routes(){
                 <Route exact path={["/","/Home"]}>
                     <Home/>
                 </Route>
-                <Route exact path="/TablaContratos">
+                <Route exact path="/Contratos">
                     <TablaContratos/>
                 </Route>
-                <Route exact path="/TablaNovedades">
+                <Route exact path="/Novedades">
                     <TablaNovedades/>
                 </Route>
                 <Route>

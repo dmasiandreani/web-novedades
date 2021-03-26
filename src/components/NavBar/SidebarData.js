@@ -6,20 +6,20 @@ import './styles.css'
 export const SidebarData = [
     {
         title: 'Home',
-        path: '/Home',
-        icon: <BiIcons.BiHomeAlt className="sideBar-icon"/>,
+        path: '/',
+        icon: <BiIcons.BiHomeAlt/>,
         cName: 'nav-text'
     },
     {
         title: 'Tabla Contratos',
-        path: '/TablaContratos',
-        icon: <BsIcons.BsTable className="sideBar-icon"/>,
+        path: '/Contratos',
+        icon: <BsIcons.BsTable/>,
         cName: 'nav-text'
     },
     {
         title: 'Tabla Novedades',
-        path: '/TablaNovedades',
-        icon: <BsIcons.BsTable className="sideBar-icon"/>,
+        path: '/Novedades',
+        icon: <BsIcons.BsTable/>,
         cName: 'nav-text'
     },
 ]

@@ -1,6 +1,10 @@
+.react-icons{
+    align-items: center;
+    color: black;
+}
 .navbar{
     background-color: white;
-    height: 60px;
+    height: 55px;
     display: flex;
     justify-content: start;
     align-items: center;

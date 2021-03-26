@@ -10,7 +10,7 @@ import logoAndreani from '../../assets/img/logo-andreani.png'
 export default function NavBar() {
     const [sideBarState, setSideBarState] = useState(false);
     return (
-        <IconContext.Provider value={{ color:'black'}}>
+        <IconContext.Provider value={{ className: 'react-icons' }}>
             <div className="navbar">
                 <Link to='#' className='menu-bars'>
                     <FaIcons.FaBars onClick={() => (setSideBarState(!sideBarState))} />
@@ -41,3 +41,7 @@ export default function NavBar() {
         </IconContext.Provider>
     );
 }
+
+
+
+
